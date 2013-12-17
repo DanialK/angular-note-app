@@ -1,0 +1,22 @@
+<header class="bar-title">
+    <a class="button" ng-hide="deleting" ng-click="edit()"> Edit </a>
+    <a class="button" ng-show="deleting" ng-click="finish()"> Finish </a>
+    <h1 class="title">Notes</h1>
+    <a class="button" ng-hide="deleting" href="#/new"> + </a>
+</header>
+<section class="content">
+	<input type="search" placeholder="Search" ng-model='query'>
+	<ul class="list">
+		<li ng-repeat="note in notes | filter:query">
+		    <a href="#/note/{{note._id}}" > 
+		    	<strong>{{ note.title}}</strong>
+		    	<span class="chevron" ng-hide="deleting"></span>
+				<a class="button-negative" ng-click="delete(note)" ng-show="deleting">Delete</a>
+		    </a>
+		    <em>{{note.text.substring(0, 30)}} ...</em>
+		    <br>
+		    {{note.date | moment}}
+		</li>
+	</ul>	
+</section>
+	

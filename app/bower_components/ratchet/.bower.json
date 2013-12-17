@@ -1,0 +1,17 @@
+{
+  "name": "ratchet",
+  "version": "1.0.1",
+  "main": [
+    "./dist/ratchet.js",
+    "./dist/ratchet.css"
+  ],
+  "homepage": "https://github.com/maker/ratchet",
+  "_release": "1.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.1",
+    "commit": "122f7b77aad82041ebe549241abb8bd95a7d7328"
+  },
+  "_source": "git://github.com/maker/ratchet.git",
+  "_target": "~1.0.1"
+}

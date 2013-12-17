@@ -1,0 +1,13 @@
+<header class="bar-title" ng-switch on="isDone">
+    <a class="button-prev" ng-click="back()"> Back </a>
+    <h1 class="title">{{title}}</h1>
+    <a class="button" ng-switch-when="true" href="#new"> + </a>
+    <a class="button" ng-switch-default ng-click="done()"> Done </a>
+</header>
+<section class='content'>
+	<form>
+	  <input type="text" ng-change='needSave()' ng-model="title" placeholder="Title" ></input>
+	  <textarea rows="5" ng-change='needSave()' ng-model="text" placeholder="Note ..."></textarea>
+	</form>	
+</section>
+

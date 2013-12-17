@@ -1,0 +1,48 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <!-- Set a shorter title for iOS6 devices when saved to home screen -->
+    <meta name="apple-mobile-web-app-title" content="Ratchet">
+
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <!-- build:css({.tmp,app}) styles/main.css -->
+        <link rel="stylesheet" href="bower_components/ratchet/dist/ratchet.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+</head>
+
+  <body ng-app="NoteApp">
+    
+    
+    <div ng-view=""/> 
+
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/pouchdb/pouchdb.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/ratchet/dist/ratchet.js"></script>
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <!-- endbuild -->
+
+        <!-- build:js scripts/plugins.js -->
+        <script src="scripts/services/notes.js"></script>
+        <script src="scripts/services/pouchdb.js"></script>
+        <script src="scripts/filters/moment.js"></script>
+        <script src="scripts/controllers/notesCtrl.js"></script>
+        <script src="scripts/controllers/noteCtrl.js"></script>
+        <script src="scripts/controllers/newNoteCtrl.js"></script>
+        <!-- endbuild -->
+</body>
+</html>
